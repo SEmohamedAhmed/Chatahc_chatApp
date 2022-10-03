@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpController">
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="95.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <GridPane alignment="center" prefHeight="720.0" prefWidth="1280.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" percentWidth="43.0" />
+                <ColumnConstraints minWidth="10.0" percentWidth="57.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="92.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <ImageView fitHeight="257.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/img/Chatahc.png" />
+                            </image>
+                        </ImageView>
+                        <Label prefHeight="42.0" prefWidth="134.0" text="ChatahC" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="67.0" prefWidth="357.0" text="Weclome to ChatahC app!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </VBox>
+                <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="100.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1">
+                            <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="584.0" prefWidth="580.0" spacing="20.0">
+                           <children>
+                                      <Label contentDisplay="CENTER" prefHeight="80.0" prefWidth="323.0" text="Create an account" textAlignment="CENTER" textFill="WHITE">
+                                          <font>
+                                              <Font name="Calibri" size="42.0" />
+                                          </font>
+                                          <VBox.margin>
+                                              <Insets top="105.0" />
+                                          </VBox.margin>
+                                 <padding>
+                                    <Insets top="30.0" />
+                                 </padding>
+                                      </Label>
+                              <TextField fx:id="phoneID" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="379.0" promptText="Phone number" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 2 0; -fx-border-color: #0D0D0D;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Max charactres length is 20" />
+                                 </tooltip>
+                              </TextField>
+                              <TextField fx:id="userName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="379.0" promptText="User name" style="-fx-font-size: 20; -fx-text-fill: white; -fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 2 0; -fx-border-color: #0D0D0D;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Max charactres length is 20" />
+                                 </tooltip>
+                              </TextField>
+                              <PasswordField fx:id="password" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="379.0" promptText="Password" style="-fx-font-size: 20; -fx-text-fill: white; -fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 2 0; -fx-border-color: #0D0D0D;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Max charactres length is 40" />
+                                 </tooltip>
+                              </PasswordField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SetProfile" prefHeight="38.0" prefWidth="111.0" style="-fx-background-color: #2e2e2e; -fx-font-size: 15;" text="Registre" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Label prefHeight="34.0" prefWidth="91.0" text="Have account ?" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Button fx:id="LoginButton" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="37.0" prefWidth="58.0" style="-fx-background-color: #2e2e2e; -fx-font-size: 15;" text="Login" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="-50.0" top="-22.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="50.0" right="100.0" top="20.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>

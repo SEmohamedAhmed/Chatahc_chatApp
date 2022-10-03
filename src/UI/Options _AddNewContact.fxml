@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OptionsController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" styleClass="secondary-color" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="36.0" prefWidth="797.0" text="New contact" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" left="10.0" right="50.0" top="30.0" />
+               </padding>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" prefHeight="163.0" prefWidth="798.0" text="Create new contact" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" left="10.0" right="50.0" top="30.0" />
+               </padding>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="59.0" prefWidth="806.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/userDefaultImage.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="contactName" focusTraversable="false" prefHeight="31.0" prefWidth="250.0" promptText="Name" style="-fx-border-color: #0D0D0D; -fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 2 0; -fx-text-fill: white; -fx-font-size: 18;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="16.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Max characters length is 20" />
+                           </tooltip></TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="53.0" prefWidth="806.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/phone.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="contactNumber" focusTraversable="false" prefHeight="31.0" prefWidth="253.0" promptText="Number" style="-fx-border-color: #0D0D0D; -fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 2 0; -fx-text-fill: white; -fx-font-size: 18;">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#addNewContact" prefHeight="30.0" prefWidth="251.0" style="-fx-background-color: #131313;" text="Add new contact" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+         <stylesheets>
+            <URL value="@../resources/css/profilesettings.css" />
+            <URL value="@../resources/css/profilesettings.css" />
+         </stylesheets>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="800.0" prefWidth="373.0" styleClass="primary-color" stylesheets="@../resources/css/profilesettings.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="back" fitHeight="37.0" fitWidth="45.0" onMouseClicked="#gotoHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="214.0" prefWidth="282.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/Chatahc.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="458.0" prefWidth="374.0" spacing="20.0" stylesheets="@../resources/css/profilesettings.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" stylesheets="@../resources/css/profilesettings.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/userDefaultImage.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#goto1" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" stylesheets="@../resources/css/profilesettings.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/password.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label onMouseClicked="#goto2" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Password" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/privacy.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#goto3" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Privacy" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/Contactslist.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#goto4" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Contacts list" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" styleClass="selected-border" stylesheets="@../resources/css/profilesettings.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/addPhone.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="32.0" prefWidth="255.0" styleClass="selected" stylesheets="@../resources/css/profilesettings.css" text="Add new contact" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" stylesheets="@../resources/css/profilesettings.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/addGroup.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#goto6" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Add new Group" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" stylesheets="@../resources/css/profilesettings.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#logout" prefHeight="32.0" prefWidth="255.0" styleClass="selected" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
