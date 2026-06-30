@@ -8,6 +8,12 @@ Chatahc is a modern messaging application inspired by popular chat platforms. It
 
 ## [🎥 Live Demo](https://drive.google.com/file/d/19w8NKnkcIFo2hWr0-8WKiCoDaajRzbnB/view)
 
+## 📸 Screenshots
+
+| Login | Home Chat | Settings |
+|-------|-----------|----------|
+| ![Login](resources/img/login.png) | ![Chat](resources/img/chat.png) | ![Settings](resources/img/options.png) 
+
 
 ## ✨ Key Features
 
@@ -284,9 +290,4 @@ prepareString(storyText, 240); // Stories
 prepareString(groupName, 15);  // Group names
 ```
 
-## 📸 Screenshots
-
-| Login | Home Chat | Stories | Settings |
-|-------|-----------|---------|----------|
-| ![Login](src/resources/img/login.png) | ![Settings](src/resources/img/options.png) | ![Chat](src/resources/img/chat.png)
 
