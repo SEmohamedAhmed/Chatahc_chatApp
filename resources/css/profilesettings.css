@@ -1,0 +1,13 @@
+.primary-color{
+-fx-background-color:#333333;
+}
+.secondary-color{
+-fx-background-color:#242424;
+}
+.selected-border{
+ -fx-border-color:#fff;
+ -fx-border-width:0 3 0 0;
+}
+.selected:hover{
+    -fx-background-color:#212020;
+}

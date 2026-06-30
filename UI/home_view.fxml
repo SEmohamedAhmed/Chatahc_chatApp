@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.HomeController">
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="5.0" vgrow="ALWAYS" />
+        <RowConstraints minHeight="10.0" percentHeight="95.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+      <GridPane style="-fx-background-color: #333333;" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #363737; -fx-border-color: black;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="userNameLabel" text="ChatahC" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+        <GridPane alignment="center" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #333333;" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" percentWidth="30.0" />
+                <ColumnConstraints minWidth="10.0" percentWidth="80.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <GridPane style="-fx-background-color: #333333;" GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #333333;">
+                            <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1167.0" spacing="5.0" style="-fx-border-color: transparent transparent grey transparent; -fx-background-color: #3C3D3F;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="-19.0" />
+                           </HBox.margin>
+                           <children>
+                                      <Label fx:id="chatRoomName" onMouseClicked="#gotoProfileDesc" prefHeight="24.0" prefWidth="874.0" text="Chat room" textAlignment="CENTER" textFill="WHITE" visible="false">
+                                          <font>
+                                              <Font name="Segoe UI Bold" size="20.0" />
+                                          </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                      </Label>
+                              <Label fx:id="lastSeen" prefHeight="18.0" prefWidth="240.0" textFill="WHITE" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #333333;" GridPane.rowIndex="1">
+                     <children>
+                        <ListView fx:id="messagesListView" focusTraversable="false" style="-fx-background-color: #333333;" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <stylesheets>
+                              <URL value="@../resources/css/messageCellViewCss.css" />
+                              <URL value="@../resources/css/usersListViewCss.css" />
+                           </stylesheets>
+                        </ListView>
+                     </children></VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #333333;" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="messageTextField" focusTraversable="false" onAction="#sendMessage" prefHeight="51.0" prefWidth="784.0" promptText="Type a message..." style="-fx-background-color: transparent; -fx-background-color: #938F8C; -fx-border-color: transparent; -fx-font-size: 25; -fx-text-fill: white;" styleClass="jfx-text-field" stylesheets="@../resources/css/textField.css" visible="false" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></HBox>
+                    </children>
+                </GridPane>
+                <GridPane style="-fx-background-color: #333333;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="90.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <effect>
+                        <DropShadow color="#000000ab" height="0.0" radius="2.4175" spread="0.2" width="11.67" />
+                    </effect>
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="350.0" spacing="20.0" style="-fx-background-color: #3C3D3F; -fx-border-color: transparent transparent grey transparent;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                            <padding>
+                                <Insets left="20.0" right="20.0" />
+                            </padding>
+                     <children>
+                        <HBox alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="50.0">
+                           <children>
+                              <ImageView fx:id="userHomeImage" fitHeight="50.0" fitWidth="40.0" onMouseClicked="#gotoProfileDesc" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/img/userDefaultImage.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="70.0" prefWidth="143.0">
+                           <HBox.margin>
+                              <Insets left="154.0" />
+                           </HBox.margin>
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="83.0">
+                                 <children>
+                                    <ImageView fx:id="storiesIcon" fitHeight="40.0" fitWidth="52.0" onMouseClicked="#gotoStoryPage" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/img/story.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets right="12.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="options" fitHeight="34.0" fitWidth="33.0" onMouseClicked="#gotoOptions" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@../resources/img/3Dots.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <HBox.margin>
+                                          <Insets right="-7.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                        </HBox>
+                  <ListView fx:id="usersListView" fixedCellSize="80.0" focusTraversable="false" style="-fx-background-color: #333333;" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                     <stylesheets>
+                        <URL value="@../resources/css/cellViewCss.css" />
+                        <URL value="@../resources/css/usersListViewCss.css" />
+                     </stylesheets>
+                  </ListView>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>

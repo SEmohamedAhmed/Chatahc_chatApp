@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="pane" alignment="center" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SetProfile">
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="5.0" vgrow="ALWAYS" />
+        <RowConstraints minHeight="10.0" percentHeight="95.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <children>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+
+        </GridPane>
+        <GridPane alignment="center" prefHeight="720.0" prefWidth="1280.0" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints minWidth="10.0" percentWidth="43.0" />
+                <ColumnConstraints minWidth="10.0" percentWidth="57.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="92.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="8.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <ImageView fitHeight="257.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/img/Chatahc.png" />
+                            </image>
+                        </ImageView>
+                        <Label prefHeight="42.0" prefWidth="134.0" text="ChatahC" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="67.0" prefWidth="357.0" text="Weclome to ChatahC app!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </VBox>
+                <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="100.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="706.0" spacing="20.0" GridPane.columnIndex="1">
+                            <children>
+                                <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="193.0" text="Set Your Profile Photo" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Calibri" size="20.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="-15.0" top="125.0" />
+                                    </VBox.margin>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                                </Label>
+                        <ImageView fx:id="userImage" fitHeight="91.0" fitWidth="119.0" onMouseClicked="#chooseImage" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../resources/img/userDefaultImage.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="uploadPhoto" mnemonicParsing="false" onAction="#chooseImage" style="-fx-background-color: #252525;" text="Upload" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <TextField fx:id="userDesc" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="218.0" promptText="Write your bio" style="-fx-background-color: #252525; -fx-text-fill: white;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="Max characters length is 20" />
+                           </tooltip>
+                        </TextField>
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToHome" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #252525;" text="Continue" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                            </children>
+                            <padding>
+                                <Insets left="50.0" right="165.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </GridPane>
+                <HBox alignment="CENTER" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </HBox>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>
