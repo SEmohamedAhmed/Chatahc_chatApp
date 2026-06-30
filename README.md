@@ -10,9 +10,14 @@ Chatahc is a modern messaging application inspired by popular chat platforms. It
 
 ## 📸 Screenshots
 
-| Login | Home Chat | Settings |
-|-------|-----------|----------|
-| ![Login](resources/img/login.png) | ![Chat](resources/img/chat.png) | ![Settings](resources/img/options.png) 
+# Login Page
+![Login](resources/img/login.png) 
+
+# Chat Page
+![Chat](resources/img/chat.png) 
+
+# Settings Page
+![Settings](resources/img/options.png) 
 
 
 ## ✨ Key Features
